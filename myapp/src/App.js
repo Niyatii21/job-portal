@@ -1,10 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
+import { Menu } from './Menu/Menu';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello Group 3</h1>
+      <Menu/>
     </div>
   );
 }
