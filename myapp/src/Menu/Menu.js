@@ -8,7 +8,7 @@ import Button from "react-bootstrap/Button";
 export const Menu = () => {
   return (
     <div>
-      <div className="main">
+      <div className="mains">
         <div className="nav">
           <div className="nav-left">
             <img
