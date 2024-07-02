@@ -1,44 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Menu/Menu.css";
 import { HiMenuAlt1 } from "react-icons/hi";
-import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
-import { Register } from "../Register/Register";
+import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 
 export const Menu = () => {
+  const [activeLink, setActiveLink] = useState("");
+
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+  };
+
   return (
     <div>
       <div className="mains">
         <div className="nav">
           <div className="nav-left">
             <img
-              src="https://jobbox-html.netlify.app/frontend/assets/imgs/template/jobhub-logo.svg"
+              src="https://t4.ftcdn.net/jpg/05/05/61/73/360_F_505617309_NN1CW7diNmGXJfMicpY9eXHKV4sqzO5H.jpg"
               alt=""
-            ></img>
+            />
           </div>
           <div className="nav-center">
-            <h4>Home</h4>
-            <h4>Find a Job</h4>
+            <Link to="/" className="link">
+              <h4
+                onClick={() => handleLinkClick("home")}
+                style={{ color: activeLink === "home" ? "red" : "black" }}
+              >
+                Home
+              </h4>
+            </Link>
+            <Link to="/job" className="link">
+              <h4
+                onClick={() => handleLinkClick("home")}
+                style={{ color: activeLink === "home" ? "red" : "black" }}
+              >
+                Find a Job
+              </h4>
+            </Link>
+
             <h4>Contact Us</h4>
           </div>
           <div className="nav-right">
             <button className="login">Login</button>
-            <Button className="register">Register</Button>
+            <Link to="/register" className="btn btn-primary">
+              <Button className="register">Register</Button>
+            </Link>
             <i>
               <HiMenuAlt1 />
             </i>
           </div>
         </div>
       </div>
-
-      <HashRouter>
-        <Routes>
-          {/* <Route path="/login" element={<Login />} /> */}
-          <Route path="/register" element={<Register />} />
-          {/* <Route path="/" element={<Home />} /> */}
-          <Route path="*" element={<Navigate to="/menu" />} />
-        </Routes>
-      </HashRouter>
     </div>
   );
 };
