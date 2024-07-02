@@ -34,8 +34,8 @@ export default function Footer() {
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
-                gap: { xs: 4, sm: 8 },
-                py: { xs: 8, sm: 20 },
+                gap: { xs: 4, sm: 2, md:8 },
+                py: { xs: 6, sm: 12, md:8 },
                 textAlign: { sm: 'center', md: 'left' },
             }}
         >
@@ -97,7 +97,7 @@ export default function Footer() {
                                     flexShrink: 0,
                                     backgroundColor: '#3C65F5',
                                     '&:hover': {
-                                        backgroundColor: '#3C65F5', // Ensure the hover state has the same color
+                                        backgroundColor: '#025fcc;F5', // Ensure the hover state has the same color
                                     },
                                     borderRadius: 5,
                                 }}

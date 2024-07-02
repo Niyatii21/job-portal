@@ -4,6 +4,7 @@ import { HiMenuAlt1 } from "react-icons/hi";
 import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
 import { Register } from "../Register/Register";
 import Button from "react-bootstrap/Button";
+import { Login } from "../Login/Login";
 
 export const Menu = () => {
   return (
@@ -33,10 +34,10 @@ export const Menu = () => {
 
       <HashRouter>
         <Routes>
-          {/* <Route path="/login" element={<Login />} /> */}
-          <Route path="/register" element={<Register />} />
+          {/* <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} /> */}
           {/* <Route path="/" element={<Home />} /> */}
-          <Route path="*" element={<Navigate to="/menu" />} />
+          {/* <Route path="*" element={<Navigate to="/menu" />} /> */}
         </Routes>
       </HashRouter>
     </div>
