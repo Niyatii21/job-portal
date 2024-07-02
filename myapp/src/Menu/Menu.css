@@ -6,12 +6,20 @@
      font-family:inter,serif; 
 }
 
-.main {
+.mains {
     height: 60px;
     width: 100%;
-    position: relative;
+    
+    
+    background-color: #fff;
 }
 .nav {
+    z-index: 1050;
+    position: fixed;
+    overflow: hidden;
+    background-color: #fff;
+    top: 0;
+    left: 0;
     height: 60px;
     width: 100%;
     display: flex;
@@ -24,17 +32,23 @@
 .nav-left img {
     font-size: 2vw;
     padding: 0 4vw;
+    width: 80px;
 }
 
 .nav-center {
+    text-decoration: none;
     display: flex;
     justify-content: center;
     gap: 10px;
     flex-grow: 1;
 }
+.link{
+    text-decoration: none;
+    color: #000;
+}
 
 .nav-center h4{
-  
+    text-decoration: none;
     margin: 0 1vw;
     margin-top: 10px;
     font: 1em sans-serif;

@@ -1,15 +1,21 @@
-import './App.css';
-import Footer from './Footer/Footer';
-import { Menu } from './Menu/Menu';
 import "./App.css";
-import Home from "./Home/Home";
+
+import Landing from "./Landing";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Register } from "./Register/Register";
+import Job from "./Job/Job";
 
 function App() {
   return (
-    <div className="App">
-      <Menu/>
-      <Footer/>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Landing></Landing>} />
+          <Route path="/register" element={<Register></Register>} />
+          <Route path="/job" element={<Job></Job>} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
